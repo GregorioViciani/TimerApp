@@ -1,0 +1,5 @@
+C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/CMakeFiles/QtApp.dir
+C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/CMakeFiles/QtApp_autogen_timestamp_deps.dir
+C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/CMakeFiles/QtApp_autogen.dir
