@@ -1487,6 +1487,80 @@
 			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Multimedia/Qt6MultimediaVersionlessAliasTargets.cmake"
 		},
 		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test/Qt6TestConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test/Qt6TestConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test/Qt6TestConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test/Qt6TestDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test/Qt6TestTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test/Qt6TestTargets-relwithdebinfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test/Qt6TestAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6TestPrivate/Qt6TestPrivateVersionlessAliasTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test/QtTestProperties.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test/Qt6TestVersionlessAliasTargets.cmake"
+		},
+		{
 			"path" : "resources.qrc"
 		}
 	],

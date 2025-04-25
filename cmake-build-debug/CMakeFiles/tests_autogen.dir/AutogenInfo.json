@@ -1,5 +1,5 @@
 {
-	"BUILD_DIR" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/QtApp_autogen",
+	"BUILD_DIR" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/tests_autogen",
 	"CMAKE_BINARY_DIR" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug",
 	"CMAKE_CURRENT_BINARY_DIR" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug",
 	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Users/grego/CLionProjects/QtApp",
@@ -377,8 +377,8 @@
 		"C:/Users/grego/CLionProjects/QtApp/resources.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/grego/CLionProjects/QtApp",
-	"DEP_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/QtApp_autogen/deps",
-	"DEP_FILE_RULE_NAME" : "QtApp_autogen/timestamp",
+	"DEP_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/tests_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "tests_autogen/timestamp",
 	"HEADERS" : 
 	[
 		[
@@ -394,27 +394,15 @@
 			null
 		],
 		[
-			"C:/Users/grego/CLionProjects/QtApp/homewindow.h",
-			"MU",
-			"EWIEGA46WW/moc_homewindow.cpp",
-			null
-		],
-		[
 			"C:/Users/grego/CLionProjects/QtApp/timerlogic.h",
 			"MU",
 			"EWIEGA46WW/moc_timerlogic.cpp",
 			null
-		],
-		[
-			"C:/Users/grego/CLionProjects/QtApp/timerwindow.h",
-			"MU",
-			"EWIEGA46WW/moc_timerwindow.cpp",
-			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
-	"INCLUDE_DIR" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/QtApp_autogen/include",
-	"MOC_COMPILATION_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/QtApp_autogen/mocs_compilation.cpp",
+	"INCLUDE_DIR" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/tests_autogen/include",
+	"MOC_COMPILATION_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/tests_autogen/mocs_compilation.cpp",
 	"MOC_DEFINITIONS" : 
 	[
 		"MINGW_HAS_SECURE_API=1",
@@ -422,6 +410,9 @@
 		"QT_GUI_LIB",
 		"QT_MULTIMEDIA_LIB",
 		"QT_NETWORK_LIB",
+		"QT_TESTCASE_BUILDDIR=\"C:/Users/grego/CLionProjects/QtApp/cmake-build-debug\"",
+		"QT_TESTCASE_SOURCEDIR=\"C:/Users/grego/CLionProjects/QtApp\"",
+		"QT_TESTLIB_LIB",
 		"QT_WIDGETS_LIB",
 		"UNICODE",
 		"WIN32",
@@ -444,6 +435,7 @@
 		"C:/Qt/6.9.0/mingw_64/mkspecs/win32-g++",
 		"C:/Qt/6.9.0/mingw_64/include/QtGui",
 		"C:/Qt/6.9.0/mingw_64/include/QtWidgets",
+		"C:/Qt/6.9.0/mingw_64/include/QtTest",
 		"C:/Qt/6.9.0/mingw_64/include/QtMultimedia",
 		"C:/Qt/6.9.0/mingw_64/include/QtNetwork",
 		"C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++",
@@ -475,33 +467,37 @@
 		"-c",
 		"C:/Program Files/CMake/share/cmake-3.27/Modules/CMakeCXXCompilerABI.cpp"
 	],
-	"MOC_PREDEFS_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/QtApp_autogen/moc_predefs.h",
+	"MOC_PREDEFS_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/tests_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
 	"MOC_SKIP" : 
 	[
+		"C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/QtApp_autogen/mocs_compilation.cpp",
 		"C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/qrc_resources.cpp"
 	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
-	"PARSE_CACHE_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/CMakeFiles/QtApp_autogen.dir/ParseCache.txt",
+	"PARSE_CACHE_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/CMakeFiles/tests_autogen.dir/ParseCache.txt",
 	"QT_MOC_EXECUTABLE" : "C:/Qt/6.9.0/mingw_64/bin/moc.exe",
 	"QT_UIC_EXECUTABLE" : "C:/Qt/6.9.0/mingw_64/bin/uic.exe",
 	"QT_VERSION_MAJOR" : 6,
 	"QT_VERSION_MINOR" : 9,
-	"SETTINGS_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/CMakeFiles/QtApp_autogen.dir/AutogenUsed.txt",
+	"SETTINGS_FILE" : "C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/CMakeFiles/tests_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
 		[ "C:/Users/grego/CLionProjects/QtApp/countdownwindow.cpp", "MU", null ],
 		[ "C:/Users/grego/CLionProjects/QtApp/globalusage.cpp", "MU", null ],
-		[ "C:/Users/grego/CLionProjects/QtApp/homewindow.cpp", "MU", null ],
-		[ "C:/Users/grego/CLionProjects/QtApp/main.cpp", "MU", null ],
-		[ "C:/Users/grego/CLionProjects/QtApp/timerlogic.cpp", "MU", null ],
-		[ "C:/Users/grego/CLionProjects/QtApp/timerwindow.cpp", "MU", null ]
+		[
+			"C:/Users/grego/CLionProjects/QtApp/test/test_timerlogic.cpp",
+			"MU",
+			null
+		],
+		[ "C:/Users/grego/CLionProjects/QtApp/timerlogic.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
 	"UIC_SKIP" : 
 	[
+		"C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/QtApp_autogen/mocs_compilation.cpp",
 		"C:/Users/grego/CLionProjects/QtApp/cmake-build-debug/qrc_resources.cpp"
 	],
 	"UIC_UI_FILES" : [],

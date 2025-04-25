@@ -2030,6 +2030,18 @@
 			"value" : "OFF"
 		},
 		{
+			"name" : "QT_FEATURE_batch_test_support",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: batch_test_support (from target Qt6::Test)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_broken_threadlocal_dtors",
 			"properties" : 
 			[
@@ -3824,6 +3836,18 @@
 				{
 					"name" : "HELPSTRING",
 					"value" : "Qt feature: itemmodel (from target Qt6::Core)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_itemmodeltester",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: itemmodeltester (from target Qt6::Test)"
 				}
 			],
 			"type" : "INTERNAL",
@@ -6182,6 +6206,18 @@
 			"value" : "ON"
 		},
 		{
+			"name" : "QT_FEATURE_testlib_selfcover",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: testlib_selfcover (from target Qt6::Test)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "QT_FEATURE_textbrowser",
 			"properties" : 
 			[
@@ -6588,6 +6624,18 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "ON"
+		},
+		{
+			"name" : "QT_FEATURE_valgrind",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Qt feature: valgrind (from target Qt6::Test)"
+				}
+			],
+			"type" : "INTERNAL",
+			"value" : "OFF"
 		},
 		{
 			"name" : "QT_FEATURE_validator",
@@ -7176,6 +7224,30 @@
 			],
 			"type" : "PATH",
 			"value" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Network"
+		},
+		{
+			"name" : "Qt6TestPrivate_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6TestPrivate."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6TestPrivate"
+		},
+		{
+			"name" : "Qt6Test_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "The directory containing a CMake configuration file for Qt6Test."
+				}
+			],
+			"type" : "PATH",
+			"value" : "C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6Test"
 		},
 		{
 			"name" : "Qt6WidgetsPrivate_DIR",
