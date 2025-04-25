@@ -5,8 +5,14 @@
 #ifndef QtApp_HOMEWINDOW_H
 #define QtApp_HOMEWINDOW_H
 
+#include "globalusage.h"
 #include <QMainWindow>
+#include <QPixmap>
+#include <QPalette>
+#include <QResizeEvent>
+#include <QString>
 #include "timerwindow.h"
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class homewindow; }
@@ -22,10 +28,13 @@ public:
 
 private slots:
     void on_timerbutton_clicked();
+    void resizeEvent(QResizeEvent *event) override;
 
 private:
     Ui::homewindow *ui;
     timerwindow* timerwin;
+    QString background = ":/Images/background1.png";
+    QSize lastSize;
 };
 
 

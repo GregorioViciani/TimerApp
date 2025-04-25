@@ -63,7 +63,7 @@ public:
 ""));
         metronomelabel = new QLabel(centralwidget);
         metronomelabel->setObjectName("metronomelabel");
-        metronomelabel->setGeometry(QRect(160, 20, 321, 261));
+        metronomelabel->setGeometry(QRect(140, 20, 321, 261));
         metronomelabel->setAlignment(Qt::AlignmentFlag::AlignCenter);
         countdownwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(countdownwindow);
@@ -84,7 +84,7 @@ public:
         countdownwindow->setWindowTitle(QCoreApplication::translate("countdownwindow", "countdownwindow", nullptr));
         label_time->setText(QCoreApplication::translate("countdownwindow", "0", nullptr));
         stopbutton->setText(QCoreApplication::translate("countdownwindow", "Stop", nullptr));
-        metronomelabel->setText(QCoreApplication::translate("countdownwindow", "Metronome", nullptr));
+        metronomelabel->setText(QString());
     } // retranslateUi
 
 };

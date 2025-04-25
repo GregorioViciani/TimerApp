@@ -34,7 +34,7 @@ QPushButton:pressed {
    <widget class="QSlider" name="oreslider">
     <property name="geometry">
      <rect>
-      <x>134</x>
+      <x>50</x>
       <y>90</y>
       <width>20</width>
       <height>100</height>
@@ -50,7 +50,7 @@ QPushButton:pressed {
    <widget class="QSlider" name="minslider">
     <property name="geometry">
      <rect>
-      <x>264</x>
+      <x>190</x>
       <y>90</y>
       <width>20</width>
       <height>100</height>
@@ -66,11 +66,32 @@ QPushButton:pressed {
    <widget class="QSlider" name="secslider">
     <property name="geometry">
      <rect>
-      <x>396</x>
+      <x>310</x>
       <y>90</y>
-      <width>20</width>
+      <width>21</width>
       <height>100</height>
      </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>5</width>
+      <height>5</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QSlider::groove:horizontal {
+    height: 10px;
+    background: rgba(0,0,0,80);
+    border-radius: 5px;
+}
+QSlider::handle:horizontal {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid rgba(0,0,0,120);
+    margin: -5px 0;
+    border-radius: 10px;
+}</string>
     </property>
     <property name="maximum">
      <number>59</number>
@@ -82,11 +103,21 @@ QPushButton:pressed {
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>117</x>
+      <x>27</x>
       <y>200</y>
-      <width>30</width>
+      <width>41</width>
       <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+               color: white;                                      
+               font-weight: bold;                                 
+               text-shadow: 1px 1px 2px black;                    
+               background-color: rgba(0, 0, 0, 128);            
+               padding: 4px;                                    
+               border-radius: 4px;                                
+            }</string>
     </property>
     <property name="text">
      <string>Ore</string>
@@ -95,11 +126,21 @@ QPushButton:pressed {
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>246</x>
+      <x>156</x>
       <y>200</y>
-      <width>41</width>
+      <width>51</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+               color: white;                                      
+               font-weight: bold;                                 
+               text-shadow: 1px 1px 2px black;                    
+               background-color: rgba(0, 0, 0, 128);            
+               padding: 4px;                                    
+               border-radius: 4px;                                
+            }</string>
     </property>
     <property name="text">
      <string>Minuti</string>
@@ -108,11 +149,21 @@ QPushButton:pressed {
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>372</x>
+      <x>282</x>
       <y>200</y>
-      <width>41</width>
+      <width>61</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+               color: white;                                      
+               font-weight: bold;                                 
+               text-shadow: 1px 1px 2px black;                    
+               background-color: rgba(0, 0, 0, 128);            
+               padding: 4px;                                    
+               border-radius: 4px;                                
+            }</string>
     </property>
     <property name="text">
      <string>Secondi</string>
@@ -121,10 +172,10 @@ QPushButton:pressed {
    <widget class="QLabel" name="orelabel">
     <property name="geometry">
      <rect>
-      <x>155</x>
-      <y>200</y>
+      <x>85</x>
+      <y>191</y>
       <width>30</width>
-      <height>20</height>
+      <height>38</height>
      </rect>
     </property>
     <property name="text">
@@ -134,10 +185,10 @@ QPushButton:pressed {
    <widget class="QLabel" name="minlabel">
     <property name="geometry">
      <rect>
-      <x>294</x>
-      <y>200</y>
+      <x>224</x>
+      <y>191</y>
       <width>30</width>
-      <height>20</height>
+      <height>38</height>
      </rect>
     </property>
     <property name="text">
@@ -147,10 +198,10 @@ QPushButton:pressed {
    <widget class="QLabel" name="seclabel">
     <property name="geometry">
      <rect>
-      <x>425</x>
-      <y>200</y>
+      <x>355</x>
+      <y>191</y>
       <width>30</width>
-      <height>20</height>
+      <height>38</height>
      </rect>
     </property>
     <property name="text">
@@ -160,9 +211,9 @@ QPushButton:pressed {
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
      <rect>
-      <x>110</x>
+      <x>20</x>
       <y>190</y>
-      <width>71</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -173,9 +224,9 @@ QPushButton:pressed {
    <widget class="QGroupBox" name="groupBox_2">
     <property name="geometry">
      <rect>
-      <x>240</x>
+      <x>150</x>
       <y>190</y>
-      <width>71</width>
+      <width>111</width>
       <height>41</height>
      </rect>
     </property>
@@ -186,9 +237,9 @@ QPushButton:pressed {
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
-      <x>370</x>
+      <x>270</x>
       <y>190</y>
-      <width>71</width>
+      <width>121</width>
       <height>41</height>
      </rect>
     </property>
@@ -199,7 +250,7 @@ QPushButton:pressed {
    <widget class="QPushButton" name="starttimer">
     <property name="geometry">
      <rect>
-      <x>210</x>
+      <x>170</x>
       <y>300</y>
       <width>131</width>
       <height>81</height>
@@ -232,14 +283,14 @@ QPushButton:pressed {
    <widget class="QLabel" name="ringlabel">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>110</x>
       <y>250</y>
-      <width>191</width>
+      <width>241</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Il timer suonerà alle: </string>
+     <string>L'ora corrente è: </string>
     </property>
    </widget>
   </widget>

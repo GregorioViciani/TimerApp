@@ -8,7 +8,8 @@
 #include <QFile>
 #include <QString>
 #include <QDir>
-
+#include <QResizeEvent>
+#include "timerlogic.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class countdownwindow; }
@@ -22,18 +23,18 @@ public:
     ~countdownwindow() override;
 
 private slots:
-    void updateTime();
     void flashTimeLabel();
-    void cleanup();
+    void resizeEvent(QResizeEvent *event) override;
 
 private:
     Ui::countdownwindow *ui;
-    QTimer *timer;
-    int remainingSeconds;
-    QSoundEffect *soundEffect;
-
-    QString gifPath = ":/Gif/Metronome.gif";
-    QMovie *movie = new QMovie(gifPath);
+    timerlogic *logic;
+    QSoundEffect *ringsound;
+    QSoundEffect *metronomesound;
+    QMovie *movie;
+    QString gifPath = ":/Images/Metronome.gif";
+    QString background = ":/Images/background2.jpg";
+    QSize lastSize;
 };
 
-#endif
+#endif // QtApp_COUNTDOWNWINDOW_H

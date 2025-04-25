@@ -70,49 +70,87 @@ public:
         centralwidget->setObjectName("centralwidget");
         oreslider = new QSlider(centralwidget);
         oreslider->setObjectName("oreslider");
-        oreslider->setGeometry(QRect(134, 90, 20, 100));
+        oreslider->setGeometry(QRect(50, 90, 20, 100));
         oreslider->setMaximum(23);
         oreslider->setOrientation(Qt::Orientation::Vertical);
         minslider = new QSlider(centralwidget);
         minslider->setObjectName("minslider");
-        minslider->setGeometry(QRect(264, 90, 20, 100));
+        minslider->setGeometry(QRect(190, 90, 20, 100));
         minslider->setMaximum(59);
         minslider->setOrientation(Qt::Orientation::Vertical);
         secslider = new QSlider(centralwidget);
         secslider->setObjectName("secslider");
-        secslider->setGeometry(QRect(396, 90, 20, 100));
+        secslider->setGeometry(QRect(310, 90, 21, 100));
+        secslider->setSizeIncrement(QSize(5, 5));
+        secslider->setStyleSheet(QString::fromUtf8("QSlider::groove:horizontal {\n"
+"    height: 10px;\n"
+"    background: rgba(0,0,0,80);\n"
+"    border-radius: 5px;\n"
+"}\n"
+"QSlider::handle:horizontal {\n"
+"    width: 20px;\n"
+"    height: 20px;\n"
+"    background: white;\n"
+"    border: 2px solid rgba(0,0,0,120);\n"
+"    margin: -5px 0;\n"
+"    border-radius: 10px;\n"
+"}"));
         secslider->setMaximum(59);
         secslider->setOrientation(Qt::Orientation::Vertical);
         label = new QLabel(centralwidget);
         label->setObjectName("label");
-        label->setGeometry(QRect(117, 200, 30, 20));
+        label->setGeometry(QRect(27, 200, 41, 20));
+        label->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"               color: white;                                      \n"
+"               font-weight: bold;                                 \n"
+"               text-shadow: 1px 1px 2px black;                    \n"
+"               background-color: rgba(0, 0, 0, 128);            \n"
+"               padding: 4px;                                    \n"
+"               border-radius: 4px;                                \n"
+"            }"));
         label_2 = new QLabel(centralwidget);
         label_2->setObjectName("label_2");
-        label_2->setGeometry(QRect(246, 200, 41, 21));
+        label_2->setGeometry(QRect(156, 200, 51, 21));
+        label_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"               color: white;                                      \n"
+"               font-weight: bold;                                 \n"
+"               text-shadow: 1px 1px 2px black;                    \n"
+"               background-color: rgba(0, 0, 0, 128);            \n"
+"               padding: 4px;                                    \n"
+"               border-radius: 4px;                                \n"
+"            }"));
         label_3 = new QLabel(centralwidget);
         label_3->setObjectName("label_3");
-        label_3->setGeometry(QRect(372, 200, 41, 21));
+        label_3->setGeometry(QRect(282, 200, 61, 21));
+        label_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
+"               color: white;                                      \n"
+"               font-weight: bold;                                 \n"
+"               text-shadow: 1px 1px 2px black;                    \n"
+"               background-color: rgba(0, 0, 0, 128);            \n"
+"               padding: 4px;                                    \n"
+"               border-radius: 4px;                                \n"
+"            }"));
         orelabel = new QLabel(centralwidget);
         orelabel->setObjectName("orelabel");
-        orelabel->setGeometry(QRect(155, 200, 30, 20));
+        orelabel->setGeometry(QRect(85, 191, 30, 38));
         minlabel = new QLabel(centralwidget);
         minlabel->setObjectName("minlabel");
-        minlabel->setGeometry(QRect(294, 200, 30, 20));
+        minlabel->setGeometry(QRect(224, 191, 30, 38));
         seclabel = new QLabel(centralwidget);
         seclabel->setObjectName("seclabel");
-        seclabel->setGeometry(QRect(425, 200, 30, 20));
+        seclabel->setGeometry(QRect(355, 191, 30, 38));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(110, 190, 71, 41));
+        groupBox->setGeometry(QRect(20, 190, 111, 41));
         groupBox_2 = new QGroupBox(centralwidget);
         groupBox_2->setObjectName("groupBox_2");
-        groupBox_2->setGeometry(QRect(240, 190, 71, 41));
+        groupBox_2->setGeometry(QRect(150, 190, 111, 41));
         groupBox_3 = new QGroupBox(centralwidget);
         groupBox_3->setObjectName("groupBox_3");
-        groupBox_3->setGeometry(QRect(370, 190, 71, 41));
+        groupBox_3->setGeometry(QRect(270, 190, 121, 41));
         starttimer = new QPushButton(centralwidget);
         starttimer->setObjectName("starttimer");
-        starttimer->setGeometry(QRect(210, 300, 131, 81));
+        starttimer->setGeometry(QRect(170, 300, 131, 81));
         starttimer->setAutoFillBackground(false);
         starttimer->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "    background-color: #4CAF50;\n"
@@ -131,7 +169,7 @@ public:
 ""));
         ringlabel = new QLabel(centralwidget);
         ringlabel->setObjectName("ringlabel");
-        ringlabel->setGeometry(QRect(200, 250, 191, 31));
+        ringlabel->setGeometry(QRect(110, 250, 241, 31));
         timerwindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(timerwindow);
         menubar->setObjectName("menubar");
@@ -163,7 +201,7 @@ public:
         groupBox_2->setTitle(QString());
         groupBox_3->setTitle(QString());
         starttimer->setText(QCoreApplication::translate("timerwindow", "Start timer", nullptr));
-        ringlabel->setText(QCoreApplication::translate("timerwindow", "Il timer suoner\303\240 alle: ", nullptr));
+        ringlabel->setText(QCoreApplication::translate("timerwindow", "L'ora corrente \303\250: ", nullptr));
         menuTimer->setTitle(QCoreApplication::translate("timerwindow", "Timer", nullptr));
     } // retranslateUi
 

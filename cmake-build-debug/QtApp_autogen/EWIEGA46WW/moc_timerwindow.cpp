@@ -42,13 +42,42 @@ template <> constexpr inline auto timerwindow::qt_create_metaobjectdata<qt_meta_
         "closeEvent",
         "",
         "QCloseEvent*",
-        "event"
+        "event",
+        "resizeEvent",
+        "QResizeEvent*",
+        "onTimerFinished",
+        "onTimerUpdated",
+        "h",
+        "m",
+        "s",
+        "updateRingLabelPreview",
+        "getTotalTimeInSeconds",
+        "updateLabelAndPreview",
+        "value"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Slot 'closeEvent'
         QtMocHelpers::SlotData<void(QCloseEvent *)>(1, 2, QMC::AccessPrivate, QMetaType::Void, {{
             { 0x80000000 | 3, 4 },
+        }}),
+        // Slot 'resizeEvent'
+        QtMocHelpers::SlotData<void(QResizeEvent *)>(5, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 6, 4 },
+        }}),
+        // Slot 'onTimerFinished'
+        QtMocHelpers::SlotData<void()>(7, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onTimerUpdated'
+        QtMocHelpers::SlotData<void(int, int, int)>(8, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 9 }, { QMetaType::Int, 10 }, { QMetaType::Int, 11 },
+        }}),
+        // Slot 'updateRingLabelPreview'
+        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'getTotalTimeInSeconds'
+        QtMocHelpers::SlotData<int()>(13, 2, QMC::AccessPrivate, QMetaType::Int),
+        // Slot 'updateLabelAndPreview'
+        QtMocHelpers::SlotData<void(int)>(14, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::Int, 15 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -74,6 +103,13 @@ void timerwindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->closeEvent((*reinterpret_cast< std::add_pointer_t<QCloseEvent*>>(_a[1]))); break;
+        case 1: _t->resizeEvent((*reinterpret_cast< std::add_pointer_t<QResizeEvent*>>(_a[1]))); break;
+        case 2: _t->onTimerFinished(); break;
+        case 3: _t->onTimerUpdated((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[3]))); break;
+        case 4: _t->updateRingLabelPreview(); break;
+        case 5: { int _r = _t->getTotalTimeInSeconds();
+            if (_a[0]) *reinterpret_cast< int*>(_a[0]) = std::move(_r); }  break;
+        case 6: _t->updateLabelAndPreview((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
         default: ;
         }
     }
@@ -98,14 +134,14 @@ int timerwindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        _id -= 7;
     }
     return _id;
 }

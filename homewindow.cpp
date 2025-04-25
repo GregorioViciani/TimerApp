@@ -14,7 +14,9 @@ homewindow::homewindow(QWidget *parent) :
         , ui(new Ui::homewindow)
         , timerwin(nullptr) {
     ui->setupUi(this);
+    resizeAndSetBackgroundImage(this, background);
     connect(ui->timerbutton, &QPushButton::clicked, this, &homewindow::on_timerbutton_clicked);
+
 }
 homewindow::~homewindow() {
     delete ui;
@@ -25,4 +27,11 @@ void homewindow::on_timerbutton_clicked() {
     }
     timerwin->show();
     this->hide();  // nascondi la home se vuoi solo mostrare la nuova
+}
+void homewindow::resizeEvent(QResizeEvent *event) {
+    if (event->size() != lastSize) {
+        resizeAndSetBackgroundImage(this, background);
+        lastSize = event->size();
+    }
+    QMainWindow::resizeEvent(event);
 }

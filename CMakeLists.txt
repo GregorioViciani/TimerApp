@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(QtApp LANGUAGES CXX)
+project(QtApp)
 
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -21,6 +21,8 @@ add_executable(QtApp
         homewindow.cpp
         timerwindow.cpp
         countdownwindow.cpp
+        timerlogic.cpp
+        globalusage.cpp
         ${RESOURCE_FILES}
 )
 

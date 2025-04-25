@@ -1,5 +1,6 @@
 QtApp_autogen/timestamp: \
   C:/Program\ Files/CMake/bin/cmake.exe \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeCInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeCXXInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeCommonLanguageInclude.cmake \
@@ -10,11 +11,13 @@ QtApp_autogen/timestamp: \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeRCInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeSystemSpecificInformation.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CMakeSystemSpecificInitialize.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckCSourceCompiles.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckCXXCompilerFlag.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckCXXSourceCompiles.cmake \
-  C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckIncludeFileCXX.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckIncludeFile.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/CheckLibraryExists.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/Compiler/GNU-C.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Compiler/GNU-CXX.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Compiler/GNU.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/FindPackageHandleStandardArgs.cmake \
@@ -25,6 +28,8 @@ QtApp_autogen/timestamp: \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Internal/CheckCompilerFlag.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Internal/CheckFlagCommonConfig.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Internal/CheckSourceCompiles.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/Platform/Windows-GNU-C-ABI.cmake \
+  C:/Program\ Files/CMake/share/cmake-3.27/Modules/Platform/Windows-GNU-C.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Platform/Windows-GNU-CXX.cmake \
   C:/Program\ Files/CMake/share/cmake-3.27/Modules/Platform/Windows-GNU.cmake \
@@ -226,6 +231,11 @@ QtApp_autogen/timestamp: \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QDateTime \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QDir \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QFile \
+  C:/Qt/6.9.0/mingw_64/include/QtCore/QList \
+  C:/Qt/6.9.0/mingw_64/include/QtCore/QObject \
+  C:/Qt/6.9.0/mingw_64/include/QtCore/QRect \
+  C:/Qt/6.9.0/mingw_64/include/QtCore/QSize \
+  C:/Qt/6.9.0/mingw_64/include/QtCore/QSizeF \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QString \
   C:/Qt/6.9.0/mingw_64/include/QtCore/QTimer \
   C:/Qt/6.9.0/mingw_64/include/QtCore/q17memory.h \
@@ -387,33 +397,48 @@ QtApp_autogen/timestamp: \
   C:/Qt/6.9.0/mingw_64/include/QtCore/qxptype_traits.h \
   C:/Qt/6.9.0/mingw_64/include/QtCore/qyieldcpu.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/QMovie \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/QPalette \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/QPixmap \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/QResizeEvent \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/QTransform \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qaction.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qbitmap.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qbrush.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qcolor.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qcursor.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qevent.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qeventpoint.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qfont.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qfontinfo.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qfontmetrics.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qfontvariableaxis.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qguiapplication.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qguiapplication_platform.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qicon.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qimage.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qimageiohandler.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qimagereader.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qinputdevice.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qinputmethod.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qkeysequence.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qmovie.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qpaintdevice.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qpalette.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qpixelformat.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qpixmap.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qpointingdevice.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qpolygon.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qregion.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qrgb.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qrgba64.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qscreen.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qscreen_platform.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtgui-config.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtguiexports.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtguiglobal.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qtransform.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qvector2d.h \
+  C:/Qt/6.9.0/mingw_64/include/QtGui/qvectornd.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.9.0/mingw_64/include/QtGui/qwindowdefs_win.h \
   C:/Qt/6.9.0/mingw_64/include/QtMultimedia/QSoundEffect \
@@ -423,7 +448,12 @@ QtApp_autogen/timestamp: \
   C:/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaexports.h \
   C:/Qt/6.9.0/mingw_64/include/QtMultimedia/qtmultimediaglobal.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QMessageBox \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/QWidget \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialog.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qmainwindow.h \
+  C:/Qt/6.9.0/mingw_64/include/QtWidgets/qmessagebox.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.9.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
@@ -660,6 +690,7 @@ QtApp_autogen/timestamp: \
   C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateTargets.cmake \
   C:/Qt/6.9.0/mingw_64/lib/cmake/Qt6ZlibPrivate/Qt6ZlibPrivateVersionlessAliasTargets.cmake \
   C:/Users/grego/CLionProjects/QtApp/CMakeLists.txt \
+  CMakeFiles/3.27.7/CMakeCCompiler.cmake \
   CMakeFiles/3.27.7/CMakeCXXCompiler.cmake \
   CMakeFiles/3.27.7/CMakeRCCompiler.cmake \
   CMakeFiles/3.27.7/CMakeSystem.cmake \
@@ -667,11 +698,15 @@ QtApp_autogen/timestamp: \
   C:/Users/grego/CLionProjects/QtApp/countdownwindow.cpp \
   C:/Users/grego/CLionProjects/QtApp/countdownwindow.h \
   C:/Users/grego/CLionProjects/QtApp/countdownwindow.ui \
+  C:/Users/grego/CLionProjects/QtApp/globalusage.cpp \
+  C:/Users/grego/CLionProjects/QtApp/globalusage.h \
   C:/Users/grego/CLionProjects/QtApp/homewindow.cpp \
   C:/Users/grego/CLionProjects/QtApp/homewindow.h \
   C:/Users/grego/CLionProjects/QtApp/homewindow.ui \
   C:/Users/grego/CLionProjects/QtApp/main.cpp \
   C:/Users/grego/CLionProjects/QtApp/resources.qrc \
+  C:/Users/grego/CLionProjects/QtApp/timerlogic.cpp \
+  C:/Users/grego/CLionProjects/QtApp/timerlogic.h \
   C:/Users/grego/CLionProjects/QtApp/timerwindow.cpp \
   C:/Users/grego/CLionProjects/QtApp/timerwindow.h \
   C:/Users/grego/CLionProjects/QtApp/timerwindow.ui
