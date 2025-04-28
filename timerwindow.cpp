@@ -27,7 +27,7 @@ timerwindow::timerwindow(QWidget *parent) :
         if (total == 0) {
             currentTime = QDateTime::currentDateTime();
             ui->ringlabel->setText("L'orario corrente è: " + currentTime.toString("hh:mm"));
-            return;  // niente timer a 0
+            return;  // niente timer a 0 sec
         }
 
         // Imposta il testo della QLabel per l'orario in cui il timer suonerà
@@ -118,5 +118,5 @@ void timerwindow::on_returnbutton_clicked() {
     if (parentWidget()) {
         parentWidget()->show();
     }
-    this->hide();  // invece di close(), se vuoi riutilizzare timerwindow più avanti
+    this->hide();
 }

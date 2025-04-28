@@ -10,7 +10,7 @@
 
 void testtimerwindow::testInitialValues() {
     int argc = 1;
-    const char *argv[] = {"test"};  // Puoi passare un nome arbitrario
+    const char *argv[] = {"test"};
     QApplication app(argc, const_cast<char **>(argv));  // Inizializza QApplication
 
     timerwindow w;
@@ -21,7 +21,7 @@ void testtimerwindow::testInitialValues() {
 
 void testtimerwindow::testSlidersUpdate() {
     int argc = 1;
-    const char *argv[] = {"test"};  // Puoi passare un nome arbitrario
+    const char *argv[] = {"test"};
     QApplication app(argc, const_cast<char **>(argv));  // Inizializza QApplication
 
     timerwindow w;
@@ -51,9 +51,10 @@ void testtimerwindow::testStartButtonCreatesCountdown() {
     timerwindow w;
 
     // Imposta i valori degli slider
-    w.findChild<QSlider*>("oreslider")->setValue(2);  // 2 ore
-    w.findChild<QSlider*>("minslider")->setValue(30); // 30 minuti
-    w.findChild<QSlider*>("secslider")->setValue(45); // 45 secondi
+    w.findChild<QSlider*>("oreslider")->setValue(2);
+    w.findChild<QSlider*>("minslider")->setValue(30);
+    w.findChild<QSlider*>("secslider")->setValue(45);
+
 
     // Verifica che le etichette siano aggiornate
     QCOMPARE(w.findChild<QLabel*>("orelabel")->text(), "2");

@@ -16,10 +16,10 @@ homewindow::~homewindow() {
 }
 void homewindow::on_timerbutton_clicked() {
     if (!timerwin) {
-        timerwin = new timerwindow(this);  // o senza `this` se vuoi una finestra separata
+        timerwin = new timerwindow(this);
     }
     timerwin->show();
-    this->hide();  // nascondi la home se vuoi solo mostrare la nuova
+    this->hide();
 }
 void homewindow::on_closebutton_clicked() {
     close();

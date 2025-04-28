@@ -7,7 +7,7 @@
 
 void testhomewindow::testTimerButtonOpensTimerWindow() {
     int argc = 1;
-    const char *argv[] = {"test"};  // Puoi passare un nome arbitrario
+    const char *argv[] = {"test"};
     QApplication app(argc, const_cast<char **>(argv));  // Inizializza QApplication
 
     homewindow win;

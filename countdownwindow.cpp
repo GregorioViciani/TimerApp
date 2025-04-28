@@ -106,15 +106,14 @@ void countdownwindow::closeEvent(QCloseEvent *event) {
 
 
 void countdownwindow::updateTimeDisplay(int secondsRemaining) {
-    int hours = secondsRemaining / 3600;          // Calcola le ore
-    int minutes = (secondsRemaining % 3600) / 60; // Calcola i minuti
-    int seconds = secondsRemaining % 60;         // Calcola i secondi
+    int hours = secondsRemaining / 3600;
+    int minutes = (secondsRemaining % 3600) / 60;
+    int seconds = secondsRemaining % 60;
 
-    // Imposta il testo con il formato desiderato
     ui->label_time->setText(QString::asprintf("%02d:%02d:%02d", hours, minutes, seconds));
 }
 
-// Funzione per far lampeggiare il tempo
+// Funzione per far lampeggiare il tempo rosso e nero
 void countdownwindow::flashTimeLabel() {
     static bool flash = false;
     flash = !flash;

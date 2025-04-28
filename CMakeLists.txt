@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Trova i pacchetti Qt6 richiesti
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Multimedia Test Network)
+find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Multimedia Test)
 
 # Abilita AUTOMOC, AUTOUIC, AUTORCC per Qt
 set(CMAKE_AUTOMOC ON)
@@ -52,7 +52,7 @@ set(UI_FILES
 add_executable(QtApp WIN32 main.cpp ${SOURCE_FILES} ${HEADER_FILES} ${RESOURCE_FILES} ${UI_FILES})
 
 # Collega le librerie Qt all'app principale
-target_link_libraries(QtApp PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Multimedia Qt6::Network)
+target_link_libraries(QtApp PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Multimedia)
 
 # File di test
 set(TEST_FILES
@@ -66,7 +66,7 @@ set(TEST_FILES
 # Aggiungi l'eseguibile dei test
 add_executable(tests ${TEST_FILES}  ${SOURCE_FILES} ${HEADER_FILES} ${UI_FILES})
 # Collega le librerie Qt ai test
-target_link_libraries(tests PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Test Qt6::Multimedia Qt6::Network)
+target_link_libraries(tests PRIVATE Qt6::Core Qt6::Gui Qt6::Widgets Qt6::Test Qt6::Multimedia)
 
 # Registra i test
 add_test(NAME AllTests COMMAND tests)

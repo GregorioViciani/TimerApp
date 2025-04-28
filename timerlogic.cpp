@@ -34,7 +34,7 @@ int timerlogic::remainingTime() const {
 void timerlogic::updateCountdown() {
     if (remainingSeconds > 0) {
         --remainingSeconds;
-        qDebug() << "Remaining seconds:" << remainingSeconds;  // Debug
+
         emit timeUpdated(
                 remainingSeconds / 3600,
                 (remainingSeconds % 3600) / 60,
