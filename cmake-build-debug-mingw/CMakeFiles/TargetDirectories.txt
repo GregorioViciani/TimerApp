@@ -1,9 +1,0 @@
-C:/Users/grego/CLionProjects/QtApp/cmake-build-debug-mingw/CMakeFiles/QtApp.dir
-C:/Users/grego/CLionProjects/QtApp/cmake-build-debug-mingw/CMakeFiles/tests.dir
-C:/Users/grego/CLionProjects/QtApp/cmake-build-debug-mingw/CMakeFiles/test.dir
-C:/Users/grego/CLionProjects/QtApp/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
-C:/Users/grego/CLionProjects/QtApp/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
-C:/Users/grego/CLionProjects/QtApp/cmake-build-debug-mingw/CMakeFiles/QtApp_autogen_timestamp_deps.dir
-C:/Users/grego/CLionProjects/QtApp/cmake-build-debug-mingw/CMakeFiles/QtApp_autogen.dir
-C:/Users/grego/CLionProjects/QtApp/cmake-build-debug-mingw/CMakeFiles/tests_autogen_timestamp_deps.dir
-C:/Users/grego/CLionProjects/QtApp/cmake-build-debug-mingw/CMakeFiles/tests_autogen.dir

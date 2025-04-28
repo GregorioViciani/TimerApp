@@ -1,0 +1,21 @@
+# Cartelle di build di CMake/CLion
+cmake-build-debug/
+cmake-build-release/
+cmake-build-debug-*/
+build/
+*.user
+*.pro.user*
+*.o
+*.obj
+*.exe
+*.dll
+*.log
+
+# File Qt generati
+moc_*.cpp
+qrc_*.cpp
+ui_*.h
+
+# Altri
+*.user
+*.swp

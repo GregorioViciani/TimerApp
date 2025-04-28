@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>Images/Metronome.gif</file>
-        <file>Images/background1.png</file>
-        <file>Images/background2.jpg</file>
-        <file>Sounds/ringsound.wav</file>
-        <file>Sounds/metronomesound.wav</file>
-    </qresource>
-</RCC>
