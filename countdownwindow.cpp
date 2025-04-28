@@ -1,6 +1,8 @@
 #include "countdownwindow.h"
 #include "ui_countdownwindow.h"
 #include "globalusage.h"
+#include "timerwindow.h"
+
 #include <QFile>
 #include <QDebug>
 #include <QPushButton>
@@ -13,14 +15,14 @@ countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
     ui->setupUi(this);
 
     // Imposta suono di fine timer
-    if (QFile::exists("Sounds/ringsound.wav")) {
-        ringsound->setSource(QUrl::fromLocalFile("Sounds/ringsound.wav"));
+    if (QFile::exists(ringsoundPath)) {
+        ringsound->setSource(QUrl::fromLocalFile(ringsoundPath));
         ringsound->setVolume(0.3f);
         ringsound->setLoopCount(QSoundEffect::Infinite);
     }
 
-    if (QFile::exists("Sounds/metronomesound.wav")) {
-        metronomesound->setSource(QUrl::fromLocalFile("Sounds/metronomesound.wav"));
+    if (QFile::exists(metronomesoundPath)) {
+        metronomesound->setSource(QUrl::fromLocalFile(metronomesoundPath));
         metronomesound->setVolume(0.1f); // Imposta il volume a 0.5
         metronomesound->setLoopCount(1);
     }
@@ -34,14 +36,6 @@ countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
             ui->metronomelabel->setScaledContents(true);
         }
     }
-
-    // Stile del pulsante stop
-    ui->stopbutton->setStyleSheet(
-            "QPushButton { background-color: #d32f2f; color: white; border-radius: 8px; padding: 6px 12px; }"
-            "QPushButton:hover { background-color: #f44336; }"
-            "QPushButton:pressed { background-color: #b71c1c; }"
-    );
-
     // Inizializza il timer
     logic = new timerlogic(this);
     logic->setTime(totalSeconds);
@@ -70,7 +64,7 @@ countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
         ui->label_time->setStyleSheet("color: red;");
         if (movie && movie->isValid() && movie->state() == QMovie::Running) {movie->stop();}
         if(metronomesound->isPlaying()) { metronomesound->stop();}
-        // Suono
+
         if (ringsound && !ringsound->isPlaying()) {ringsound->play();}
         flashTimeLabel();
     });
@@ -79,16 +73,37 @@ countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
     connect(ui->stopbutton, &QPushButton::clicked, this, [=]() {
         logic->stop();
         updateTimeDisplay(0);
-        delete ringsound;
-        close();
+        if (metronomesound->isPlaying()) {
+            metronomesound->stop();
+        }
+        if (ringsound->isPlaying()) {
+            ringsound->stop();
+        }
+
+        // Qui invece di close(), chiamiamo stopTimer in timerwindow
+        if (parentWidget()) {
+            auto *parentWindow = qobject_cast<timerwindow *>(parentWidget());
+            if (parentWindow) {
+                parentWindow->stopTimer();  // Ferma il timer e resetta il display
+            }
+        }
+        emit countdownClosed();
+        this->hide(); // Nascondi countdownwindow
     });
+
+
 }
 
 countdownwindow::~countdownwindow() {
-    logic->stop();
-    updateTimeDisplay(0);
-    delete ui;
+    cleanup();
 }
+
+void countdownwindow::closeEvent(QCloseEvent *event) {
+    cleanup();
+    emit countdownClosed();
+    QMainWindow::closeEvent(event);
+}
+
 
 void countdownwindow::updateTimeDisplay(int secondsRemaining) {
     int hours = secondsRemaining / 3600;          // Calcola le ore
@@ -116,4 +131,20 @@ void countdownwindow::resizeEvent(QResizeEvent *event) {
         lastSize = event->size();
     }
     QMainWindow::resizeEvent(event);
+}
+void countdownwindow::cleanup() {
+
+    if (metronomesound->isPlaying()) {
+        metronomesound->stop();
+    }
+    if (ringsound->isPlaying()) {
+        ringsound->stop();
+    }
+
+    disconnect(logic, &timerlogic::timeUpdated, this, nullptr);
+    disconnect(logic, &timerlogic::timeFinished, this, nullptr);
+    disconnect(ui->stopbutton, &QPushButton::clicked, this, nullptr);
+
+    delete metronomesound;
+    delete ringsound;
 }

@@ -1,6 +1,8 @@
 #ifndef QtApp_COUNTDOWNWINDOW_H
 #define QtApp_COUNTDOWNWINDOW_H
 
+#include "timerlogic.h"
+
 #include <QMainWindow>
 #include <QTimer>
 #include <QSoundEffect>
@@ -9,7 +11,6 @@
 #include <QString>
 #include <QDir>
 #include <QResizeEvent>
-#include "timerlogic.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class countdownwindow; }
@@ -23,10 +24,16 @@ public:
     explicit countdownwindow(int totalSeconds, QWidget *parent = nullptr);
     ~countdownwindow() override;
 
+signals:
+    void countdownClosed();
+
 private slots:
     void flashTimeLabel();
     void resizeEvent(QResizeEvent *event) override;
     void updateTimeDisplay(int secondsRemaining);
+    void closeEvent(QCloseEvent *event) override;
+    void cleanup();
+
 
 private:
     Ui::countdownwindow *ui;
@@ -36,6 +43,8 @@ private:
     QMovie *movie;
     QString gifPath = ":/Images/Metronome.gif";
     QString background = ":/Images/background2.jpg";
+    QString ringsoundPath = ":/Sounds/ringsound.wav";
+    QString metronomesoundPath = ":/Sounds/metronomesound.wav";
     QSize lastSize;
 };
 

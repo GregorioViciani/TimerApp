@@ -1,5 +1,6 @@
 #include "../ui_countdownwindow.h"
 #include "test_countdownwindow.h"
+
 #include <QPushButton>
 #include <QTest>
 #include <QSignalSpy>

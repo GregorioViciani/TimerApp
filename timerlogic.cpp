@@ -1,4 +1,5 @@
 #include "timerlogic.h"
+
 #include <QDebug>
 
 timerlogic::timerlogic(QObject *parent)

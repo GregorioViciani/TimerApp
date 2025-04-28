@@ -21,6 +21,14 @@ void homewindow::on_timerbutton_clicked() {
     timerwin->show();
     this->hide();  // nascondi la home se vuoi solo mostrare la nuova
 }
+void homewindow::on_closebutton_clicked() {
+    close();
+}
+
+void homewindow::closeEvent(QCloseEvent *event) {
+    QApplication::quit();  // chiude tutta l'app quando questa finestra si chiude
+}
+
 void homewindow::resizeEvent(QResizeEvent *event) {
     if (event->size() != lastSize) {
         resizeAndSetBackgroundImage(this, background);

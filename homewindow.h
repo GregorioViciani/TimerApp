@@ -3,13 +3,13 @@
 #define QtApp_HOMEWINDOW_H
 
 #include "globalusage.h"
+#include "timerwindow.h"
+
 #include <QMainWindow>
 #include <QPixmap>
 #include <QPalette>
 #include <QResizeEvent>
 #include <QString>
-#include "timerwindow.h"
-
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class homewindow; }
@@ -27,6 +27,8 @@ public:
 private slots:
     void on_timerbutton_clicked();
     void resizeEvent(QResizeEvent *event) override;
+    void closeEvent(QCloseEvent *event) override ;
+    void on_closebutton_clicked();
 
 private:
     Ui::homewindow *ui;

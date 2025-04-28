@@ -1,11 +1,10 @@
-#include <QCoreApplication>
-#include <QTest>
-
-
 #include "test_homewindow.h"
 #include "test_timerwindow.h"
 #include "test_timerlogic.h"
 #include "test_countdownwindow.h"
+
+#include <QCoreApplication>
+#include <QTest>
 
 int main(int argc, char *argv[]) {
     // Inizializza l'app Qt per eseguire i test

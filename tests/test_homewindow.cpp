@@ -1,8 +1,9 @@
 #include "test_homewindow.h"
+#include "../homewindow.h"
+
 #include <QPushButton>
 #include <QtTest>
-#include <QApplication>
-#include "../homewindow.h"
+
 
 void testhomewindow::testTimerButtonOpensTimerWindow() {
     int argc = 1;

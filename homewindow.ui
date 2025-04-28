@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>610</width>
-    <height>485</height>
+    <width>650</width>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,14 +17,33 @@
    <widget class="QPushButton" name="timerbutton">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>120</y>
+      <x>200</x>
+      <y>150</y>
       <width>201</width>
       <height>151</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: #1976d2; color: white; border-radius: 8px; padding: 6px 12px; }QPushButton:hover { background-color: #2196f3; }QPushButton:pressed { background-color: #0d47a1; }</string>
+    </property>
     <property name="text">
      <string>Timer</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="closebutton">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton { background-color: #d32f2f; color: white; border-radius: 8px; padding: 6px 12px; }QPushButton:hover { background-color: #f44336; }QPushButton:pressed { background-color: #b71c1c; }</string>
+    </property>
+    <property name="text">
+     <string>Close App</string>
     </property>
    </widget>
   </widget>
@@ -33,7 +52,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>610</width>
+     <width>650</width>
      <height>33</height>
     </rect>
    </property>

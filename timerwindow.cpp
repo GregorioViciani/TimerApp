@@ -1,10 +1,10 @@
 #include "globalusage.h"
 #include "timerwindow.h"
 #include "ui_timerwindow.h"
+
 #include <QApplication>
 #include <QSlider>
 #include <QPushButton>
-
 
 timerwindow::timerwindow(QWidget *parent) :
         QMainWindow(parent), ui(new Ui::timerwindow) {
@@ -25,6 +25,7 @@ timerwindow::timerwindow(QWidget *parent) :
         logic->start();
 
         if (total == 0) {
+            currentTime = QDateTime::currentDateTime();
             ui->ringlabel->setText("L'orario corrente è: " + currentTime.toString("hh:mm"));
             return;  // niente timer a 0
         }
@@ -32,14 +33,14 @@ timerwindow::timerwindow(QWidget *parent) :
         // Imposta il testo della QLabel per l'orario in cui il timer suonerà
         auto *countdown = new countdownwindow(total, this);
         countdown->show();
+
+        connect(countdown, &countdownwindow::countdownClosed, this, &timerwindow::resetTimer);
+        connect(ui->returnbutton, &QPushButton::clicked, this, &timerwindow::on_returnbutton_clicked);
+
     });
     resizeAndSetBackgroundImage(this, background);
     ui->ringlabel->setText("L'orario corrente è: " + currentTime.toString("hh:mm"));
-    ui->ringlabel->setStyleSheet(colorlabel);
-    ui->minlabel->setStyleSheet(colorlabel);
-    ui->seclabel->setStyleSheet(colorlabel);
-    ui->orelabel->setStyleSheet(colorlabel);
-    ui->starttimer->setStyleSheet(greenbutton);
+
 }
 timerwindow::~timerwindow() {
     delete ui;
@@ -95,4 +96,27 @@ void timerwindow::updateLabelAndPreview(int value) {
     // Aggiorna la preview del tempo
     updateRingLabelPreview();
 }
-//incapsulare tutto il timer in un oggetto solo, unit testing sulla gui
+void timerwindow::resetTimer() {
+    ui->ringlabel->setText("L'orario corrente è: " + QDateTime::currentDateTime().toString("hh:mm"));
+    ui->ringlabel->setStyleSheet(colorlabelblack);
+    ui->oreslider->setValue(0);
+    ui->minslider->setValue(0);
+    ui->secslider->setValue(0);
+
+}
+void timerwindow::stopTimer() {
+    logic->stop();  // Ferma il timer
+    updateLabelAndPreview(0);  // Reset del display
+    ui->ringlabel->setText("L'orario corrente è: " + QDateTime::currentDateTime().toString("hh:mm:ss"));
+    ui->ringlabel->setStyleSheet(colorlabelblack);  // Ripristina il colore originale
+
+    disconnect(logic, &timerlogic::timeUpdated, this, &timerwindow::onTimerUpdated);
+}
+
+
+void timerwindow::on_returnbutton_clicked() {
+    if (parentWidget()) {
+        parentWidget()->show();
+    }
+    this->hide();  // invece di close(), se vuoi riutilizzare timerwindow più avanti
+}

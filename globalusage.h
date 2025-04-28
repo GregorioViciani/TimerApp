@@ -1,6 +1,3 @@
-//
-// Created by grego on 23/04/2025.
-//
 
 #ifndef QTAPP_GLOBALUSAGE_H
 #define QTAPP_GLOBALUSAGE_H

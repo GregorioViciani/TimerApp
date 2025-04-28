@@ -1,12 +1,12 @@
 #include "../timerwindow.h"
 #include "test_timerwindow.h"
-#include <QSignalSpy>
+
+
 #include <QSlider>
 #include <QPushButton>
-#include <QApplication>
 #include <QTest>
 #include <QLabel>
-#include <QMovie>
+
 
 void testtimerwindow::testInitialValues() {
     int argc = 1;

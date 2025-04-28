@@ -1,7 +1,8 @@
 #include "../timerlogic.h"
 #include "test_timerlogic.h"
+
 #include <QSignalSpy>
-#include <QApplication>
+
 #include <QTest>
 
 void testtimerlogic::testSetTime() {

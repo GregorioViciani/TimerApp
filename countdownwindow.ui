@@ -46,21 +46,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">ui-&gt;stopbutton-&gt;setStyleSheet(
-    &quot;QPushButton {&quot;
-    &quot;   background-color: #d32f2f;&quot;        // rosso base
-    &quot;   color: white;&quot;
-    &quot;   border-radius: 8px;&quot;
-    &quot;   padding: 6px 12px;&quot;
-    &quot;}&quot;
-    &quot;QPushButton:hover {&quot;
-    &quot;   background-color: #f44336;&quot;      
-    &quot;}&quot;
-    &quot;QPushButton:pressed {&quot;
-    &quot;   background-color: #b71c1c;&quot;        
-    &quot;}&quot;
-);
-</string>
+     <string notr="true">QPushButton { background-color: #d32f2f; color: white; border-radius: 8px; padding: 6px 12px; }QPushButton:hover { background-color: #f44336; }QPushButton:pressed { background-color: #b71c1c; }</string>
     </property>
     <property name="text">
      <string>Stop</string>

@@ -2,6 +2,7 @@
 #define TEST_COUNTDOWNWINDOW_H
 
 #include "../countdownwindow.h"
+
 #include <QObject>
 
 class testcountdownwindow : public QObject {

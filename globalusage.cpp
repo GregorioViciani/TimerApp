@@ -1,8 +1,5 @@
-//
-// Created by grego on 23/04/2025.
-//
-
 #include "globalusage.h"
+
 #include <QPixmap>
 #include <QPalette>
 #include <QBrush>
