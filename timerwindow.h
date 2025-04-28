@@ -19,6 +19,7 @@ QT_END_NAMESPACE
 
 class timerwindow : public QMainWindow {
 Q_OBJECT
+    friend class testtimerwindow;
 
 public:
     explicit timerwindow(QWidget *parent = nullptr);

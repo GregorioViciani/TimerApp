@@ -17,6 +17,7 @@ QT_END_NAMESPACE
 
 class countdownwindow : public QMainWindow {
 Q_OBJECT
+    friend class testcountdownwindow;  // Permette l'accesso ai membri privati nella classe di test
 
 public:
     explicit countdownwindow(int totalSeconds, QWidget *parent = nullptr);
@@ -25,6 +26,7 @@ public:
 private slots:
     void flashTimeLabel();
     void resizeEvent(QResizeEvent *event) override;
+    void updateTimeDisplay(int secondsRemaining);
 
 private:
     Ui::countdownwindow *ui;

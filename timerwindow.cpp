@@ -1,12 +1,19 @@
+#include "globalusage.h"
 #include "timerwindow.h"
 #include "ui_timerwindow.h"
+#include <QApplication>
+#include <QSlider>
+#include <QPushButton>
+
 
 timerwindow::timerwindow(QWidget *parent) :
         QMainWindow(parent), ui(new Ui::timerwindow) {
     ui->setupUi(this);
-    logic = new timerlogic(this);  // associato al parent
+
+    logic = new timerlogic(this);
     connect(logic, &timerlogic::timeFinished, this, &timerwindow::onTimerFinished);
     connect(logic, &timerlogic::timeUpdated, this, &timerwindow::onTimerUpdated);
+
     // Connessione degli slider a un'unica funzione per aggiornare l'etichetta
     connect(ui->oreslider, &QSlider::valueChanged, this, &timerwindow::updateLabelAndPreview);
     connect(ui->minslider, &QSlider::valueChanged, this, &timerwindow::updateLabelAndPreview);

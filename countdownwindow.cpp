@@ -3,6 +3,7 @@
 #include "globalusage.h"
 #include <QFile>
 #include <QDebug>
+#include <QPushButton>
 
 countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
         : QMainWindow(parent), ui(new Ui::countdownwindow),
@@ -16,16 +17,12 @@ countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
         ringsound->setSource(QUrl::fromLocalFile("Sounds/ringsound.wav"));
         ringsound->setVolume(0.3f);
         ringsound->setLoopCount(QSoundEffect::Infinite);
-    } else {
-        qDebug() << "Errore nel caricamento della sveglia!";
     }
 
     if (QFile::exists("Sounds/metronomesound.wav")) {
         metronomesound->setSource(QUrl::fromLocalFile("Sounds/metronomesound.wav"));
         metronomesound->setVolume(0.1f); // Imposta il volume a 0.5
         metronomesound->setLoopCount(1);
-    } else {
-        qDebug() << "Errore nel caricamento del metronomo!";
     }
 
     // Inizializza QMovie se il formato è valido
@@ -35,8 +32,6 @@ countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
             ui->metronomelabel->setMovie(movie);
             ui->metronomelabel->setVisible(false);  // Label nascosta all'inizio
             ui->metronomelabel->setScaledContents(true);
-        } else {
-            qDebug() << "Formato GIF non valido o non supportato.";
         }
     }
 
@@ -50,6 +45,7 @@ countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
     // Inizializza il timer
     logic = new timerlogic(this);
     logic->setTime(totalSeconds);
+    updateTimeDisplay(totalSeconds);
     logic->start();
 
     // Collegamenti per aggiornare il tempo
@@ -82,6 +78,7 @@ countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
     // Pulsante STOP
     connect(ui->stopbutton, &QPushButton::clicked, this, [=]() {
         logic->stop();
+        updateTimeDisplay(0);
         delete ringsound;
         close();
     });
@@ -89,7 +86,17 @@ countdownwindow::countdownwindow(int totalSeconds, QWidget *parent)
 
 countdownwindow::~countdownwindow() {
     logic->stop();
+    updateTimeDisplay(0);
     delete ui;
+}
+
+void countdownwindow::updateTimeDisplay(int secondsRemaining) {
+    int hours = secondsRemaining / 3600;          // Calcola le ore
+    int minutes = (secondsRemaining % 3600) / 60; // Calcola i minuti
+    int seconds = secondsRemaining % 60;         // Calcola i secondi
+
+    // Imposta il testo con il formato desiderato
+    ui->label_time->setText(QString::asprintf("%02d:%02d:%02d", hours, minutes, seconds));
 }
 
 // Funzione per far lampeggiare il tempo

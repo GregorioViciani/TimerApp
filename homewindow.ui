@@ -17,27 +17,14 @@
    <widget class="QPushButton" name="timerbutton">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>160</y>
-      <width>151</width>
-      <height>101</height>
+      <x>170</x>
+      <y>120</y>
+      <width>201</width>
+      <height>151</height>
      </rect>
     </property>
     <property name="text">
      <string>Timer</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="svegliabutton">
-    <property name="geometry">
-     <rect>
-      <x>380</x>
-      <y>160</y>
-      <width>161</width>
-      <height>101</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Sveglia</string>
     </property>
    </widget>
   </widget>

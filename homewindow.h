@@ -1,6 +1,3 @@
-//
-// Created by grego on 22/04/2025.
-//
 
 #ifndef QtApp_HOMEWINDOW_H
 #define QtApp_HOMEWINDOW_H
@@ -20,6 +17,7 @@ QT_END_NAMESPACE
 
 class homewindow : public QMainWindow {
     Q_OBJECT
+    friend class testhomewindow;  // Permette l'accesso ai membri privati nella classe di test
 
 public:
     explicit homewindow(QWidget *parent = nullptr);

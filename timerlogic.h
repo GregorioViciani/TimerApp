@@ -3,10 +3,10 @@
 
 #include <QObject>
 #include <QTimer>
-#include <QMessageBox>
 
 class timerlogic : public QObject {
 Q_OBJECT
+    friend class testtimerlogic;
 
 public:
     explicit timerlogic(QObject *parent = nullptr);
@@ -16,7 +16,7 @@ public:
     void stop();
     int remainingTime() const;
 
-signals:
+public: signals:
     void timeUpdated(int hours, int minutes, int seconds);
     void timeFinished();
 
@@ -24,8 +24,8 @@ private slots:
     void updateCountdown();
 
 private:
-    int remainingSeconds = 0;
     QTimer *timer;
+    int remainingSeconds = 0;
 };
 
 #endif // TIMERLOGIC_H

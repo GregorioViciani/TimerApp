@@ -1,13 +1,6 @@
-//
-// Created by grego on 22/04/2025.
-//
-
-// You may need to build the project (run Qt uic code generator) to get "ui_homewindow.h" resolved
-
+#include "globalusage.h"
 #include "homewindow.h"
 #include "ui_homewindow.h"
-
-
 
 homewindow::homewindow(QWidget *parent) :
         QMainWindow(parent)
